@@ -31,7 +31,7 @@ async function generateAnswers(port, question) {
   port.onDisconnect.addListener(() => {
     controller.abort()
   })
-  const response = await fetch('https://api.chatgptcn.tk/api/base/quest', {
+  const response = await fetch('https://api.chatgptcn.tk/base/quest', {
     method: 'POST',
     body: JSON.stringify({ 
       prompt : question, 
